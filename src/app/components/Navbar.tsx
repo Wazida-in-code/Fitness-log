@@ -5,8 +5,8 @@ import { GiHamburgerMenu } from 'react-icons/gi';
 
 const Navbar = () => {
     return (
-        <div className=' xl:container xl:max-auto  bg-[#000000]'>
-        <nav className='flex justify-between w-11/12 mx-auto xl:container'>
+        <div className=' bg-[#000000]'>
+        <nav className='flex justify-between w-11/12 mx-auto'>
             <div className='flex py-4 gap-2'> 
                 <Image alt='logo' src={logo}></Image>
                 <h2 className='font-bold text-2xl text-white'>FITLOG</h2>
