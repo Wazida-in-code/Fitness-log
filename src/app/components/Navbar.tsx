@@ -8,8 +8,8 @@ import { usePathname } from 'next/navigation';
 const Navbar = () => {
     const pathName = usePathname();
     return (
-        <div className=' bg-[#000000]'>
-        <nav className='flex justify-between w-11/12 mx-auto py-5'>
+        <div className=' bg-[#000000] border-b border-gray-800'>
+        <nav className='flex justify-between w-11/12 mx-auto py-3'>
             <div className='flex py-4 gap-2'> 
                 <Image alt='logo' src={logo}></Image>
                 <h2 className='font-bold text-2xl text-white'>FITLOG</h2>
@@ -25,6 +25,7 @@ const Navbar = () => {
             </div>
             <div className='hidden md:flex gap-4 items-center'>
                 <Link href="/myPlan" className='text-[#D1D5DB]'>Plan</Link>
+                <span></span>
                 <Link href="/myPlan" className='text-[#9CA3AF]'>Saved</Link>
             </div>
             <GiHamburgerMenu className='md:hidden text-white mt-5' />

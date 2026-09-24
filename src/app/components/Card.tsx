@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { CardType } from "../types/CardType";
 import Link from "next/link";
+import { FiClock, FiStar } from "react-icons/fi";
+import { LuFlame } from "react-icons/lu";
 
 interface CardProps {
   card: CardType;
@@ -51,19 +53,19 @@ const CardPage = ({ card }: CardProps) => {
           <div className="flex items-center gap-7 text-gray-400">
             {/* Duration */}
             <div className="flex items-center gap-2">
-              <span className="text-xl">◷</span>
+            <FiClock size={13} />
               <span>{card.duration} min</span>
             </div>
 
             {/* Calories */}
             <div className="flex items-center gap-2">
-              <span className="text-xl">🔥</span>
+              <LuFlame size={16}  />
               <span>{card.caloriesBurned} kcal</span>
             </div>
 
             {/* Rating */}
             <div className="flex items-center gap-2">
-              <span className="text-2xl">☆</span>
+                <FiStar size={13} />
               <span>{card.rating}</span>
             </div>
           </div>

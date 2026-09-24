@@ -5,7 +5,7 @@ import AllCards from "./components/AllCards";
 export default function Home() {
   return (
     <div className="bg-[#000000]">
-      <main>
+      <main className="pt-8">
         <div className="flex flex-col md:flex-row justify-between rounded-2xl bg-[#15171D] w-11/12 mx-auto pt-8 pb-6 overflow-hidden">
           {/* Content */}
           <div className="w-full md:w-1/2">
