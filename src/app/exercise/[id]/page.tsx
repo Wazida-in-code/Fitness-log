@@ -1,4 +1,5 @@
-import { CardType } from "@/app/types/CardType";
+import SavePlan from "@/app/components/AllButtons/SavePlan";
+import TodayPlan from "@/app/components/AllButtons/TodayPlan";
 import Image from "next/image";
 
 interface CardDetailsProps {
@@ -146,13 +147,11 @@ const CardDetails = async ({ params }: CardDetailsProps) => {
 
           {/* Buttons */}
           <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:flex-wrap sm:gap-4">
-            <button className="w-full rounded-xl bg-[#BAFF00] px-6 py-3 font-bold text-black sm:w-auto">
-              Add to today&apos;s plan
-            </button>
+           
+           <TodayPlan card={card} />
 
-            <button className="w-full rounded-xl border border-gray-700 px-6 py-3 sm:w-auto">
-              Save for later
-            </button>
+            <SavePlan card={card} />
+           
           </div>
         </div>
       </div>
