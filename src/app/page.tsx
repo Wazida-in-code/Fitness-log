@@ -22,9 +22,11 @@ export default function Home() {
               into today&apos;s plan, and watch the week&apos;s work add up.
             </p>
 
-            <button className="bg-[#C2F800] px-4 py-2.5 ml-6 rounded-md font-bold">
-              BROWSE WORKOUTS
-            </button>
+            <a href="#allCards">
+              <button className="bg-[#C2F800] px-4 py-2.5 ml-6 rounded-md font-bold">
+                BROWSE WORKOUTS
+              </button>
+            </a>
           </div>
 
           {/* Image */}

@@ -6,11 +6,14 @@ const AllCards = async () => {
   const cards = await res.json();
 
   return (
-    <div className="bg-[#000000]">
-      <h2 className="text-4xl font-bold">THE LIBRARY</h2>
-      <p>Twelve lifts covering every major muscle group.</p>
+    <div className="bg-[#000000] px-4 py-10">
+      
+        <div className="mb-8">
+            <h2 className="text-4xl font-bold text-white">THE LIBRARY</h2>
+            <p className="text-[#9CA3AF] mt-2">Twelve lifts covering every major muscle group.</p>
+        </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div  id="allCards" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {cards.map((card: CardType) => {
           return <CardPage key={card.id} card={card} />;
         })}
