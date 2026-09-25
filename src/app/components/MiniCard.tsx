@@ -58,7 +58,7 @@ const MiniCard = ({card}: CardProps) => {
       <div className="hidden items-center gap-2 sm:flex">
         {/* View Details */}
         <Link
-          href={`/workouts/${card.id}`}
+          href={`/exercise/${card.id}`}
           className="rounded-full border border-[#39404B] px-4 py-2 text-xs text-white transition hover:bg-[#20242C]"
         >
           View Details
