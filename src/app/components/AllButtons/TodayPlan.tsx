@@ -9,9 +9,10 @@ const TodayPlan = ({card}: {card:CardType}) => {
     const handleToday = () => {
         setTodayPlan([...todayPlan, card]);
         toast.success("Added to today's plan!")
-    }
+    }    
+
     return (
-        <button onClick={()=> handleToday()} className="w-full rounded-xl bg-[#BAFF00] px-6 py-3 font-bold text-black sm:w-auto">
+        <button onClick={()=> handleToday()} disabled={todayPlan.some((item:CardType) => item.id === card.id)} className="disabled:cursor-not-allowed w-full rounded-xl bg-[#BAFF00] px-6 py-3 font-bold text-black sm:w-auto">
               Add to today&apos;s plan
         </button>
     );

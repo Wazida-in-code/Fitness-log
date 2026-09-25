@@ -10,8 +10,9 @@ const SavePlan = ({card}: {card: CardType}) => {
         setSaveLater([...saveLater, card]);
         toast.success("Saved for later!")
     };
+
     return (
-        <button onClick={() => handleSave()} className="w-full rounded-xl border border-gray-700 px-6 py-3 sm:w-auto">
+        <button onClick={() => handleSave()} disabled={saveLater.some((item:CardType) => item.id === card.id)} className="disabled:cursor-not-allowed w-full rounded-xl border border-gray-700 px-6 py-3 sm:w-auto">
               Save for later
         </button>
     );

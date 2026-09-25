@@ -8,7 +8,7 @@ import Link from "next/link";
 
 const MyPlan = () => {
   const { todayPlan, saveLater } = useContext(FitContext);
-  const [active, setActive] = useState("today");
+  const [active, setActive] = useState<"today" | "saveLater">("today");
   const [sortby, setSortBy] = useState<"duration" | "calori" | "rating">("duration");
 
   const currentPlan = active === "today" ? todayPlan : saveLater;
@@ -116,7 +116,7 @@ const MyPlan = () => {
         <div className="bg-[#000000] py-10">
           {currentPlan.length > 0 ? (
             sortCurrentPlan.map((card: CardType) => (
-              <MiniCard key={card.id} card={card} />
+              <MiniCard key={card.id} card={card} active={active} />
             ))
           ) : (
             <div className="flex min-h-[200px] w-full flex-col items-center justify-center rounded-lg border border-dashed border-[#2B303D] text-center">

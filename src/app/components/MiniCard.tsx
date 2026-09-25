@@ -1,14 +1,17 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FiClock, FiStar, FiCheck, FiX } from "react-icons/fi";
+import { FiClock, FiStar } from "react-icons/fi";
 import { LuFlame } from "react-icons/lu";
 import { CardType } from "../types/CardType";
+import RemoveBtn from "./AllButtons/RemoveBtn";
+import MarkRemover from "./AllButtons/MarkRemover";
 
 interface CardProps {
   card: CardType;
+  active: string;
 }
 
-const MiniCard = ({card}: CardProps) => {
+const MiniCard = ({card, active}: CardProps) => {
   return (
     <div className="flex w-full items-center gap-4 rounded-2xl border border-[#252A33] bg-[#15171D] p-3 sm:p-4">
       {/* Image */}
@@ -65,15 +68,10 @@ const MiniCard = ({card}: CardProps) => {
         </Link>
 
         {/* Mark as Done */}
-        <button className="flex items-center gap-1.5 rounded-full bg-[#C2F800] px-4 py-2 text-xs font-semibold text-black transition hover:bg-[#b2e600]">
-          <FiCheck size={14} />
-          Mark as Done
-        </button>
+        <MarkRemover card={card} active={active} />
 
         {/* Remove */}
-        <button className="ml-1 text-[#69707C] hover:text-white">
-          <FiX size={16} />
-        </button>
+        <RemoveBtn card={card} active={active} />
       </div>
     </div>
   );
