@@ -1,21 +1,42 @@
-'use client'
+"use client";
+
 import { CardType } from "@/app/types/CardType";
 import { FitContext } from "@/context/FitProvider";
 import { useContext } from "react";
 import { toast } from "react-toastify";
 
-const TodayPlan = ({card}: {card:CardType}) => {
-    const {todayPlan, setTodayPlan} = useContext(FitContext)
-    const handleToday = () => {
-        setTodayPlan([...todayPlan, card]);
-        toast.success("Added to today's plan!")
-    }    
+const TodayPlan = ({ card }: { card: CardType }) => {
+  const { todayPlan, setTodayPlan } = useContext(FitContext);
 
-    return (
-        <button onClick={()=> handleToday()} disabled={todayPlan.some((item:CardType) => item.id === card.id)} className="disabled:cursor-not-allowed w-full rounded-xl bg-[#BAFF00] px-6 py-3 font-bold text-black sm:w-auto">
-              Add to today&apos;s plan
-        </button>
+  const handleToday = () => {
+    setTodayPlan([...todayPlan, card]);
+    toast.success("Added to today's plan!");
+  };
+
+  const addDisable = () => {
+    toast.error("Already in your plan!");
+  };
+
+  const handleClick = () => {
+    const alreadyAdded = todayPlan.some(
+      (item: CardType) => item.id === card.id
     );
+
+    if (alreadyAdded) {
+      addDisable();
+    } else {
+      handleToday();
+    }
+  };
+
+  return (
+    <button
+      onClick={handleClick}
+      className="w-full rounded-xl bg-[#BAFF00] px-6 py-3 font-bold text-black sm:w-auto"
+    >
+      Add to today&apos;s plan
+    </button>
+  );
 };
 
 export default TodayPlan;
