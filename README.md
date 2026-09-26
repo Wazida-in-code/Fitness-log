@@ -1,4 +1,4 @@
-**FITLOG**
+<h1>FITLOG</h1>
 
 <h2>Description</h2>
 
@@ -13,21 +13,57 @@ FITLOG is built with a focus on simple workout planning, clear information, resp
 
 <h2>Technologies used</h2>
 
--Next.js, 
--React, 
--TypeScript, 
--Tailwind CSS,
--DaisyUI
--React Icons
--React Toastify
-
+<ul>
+  <li>Next.js</li>
+  <li>React</li>
+  <li>TypeScript</li>
+  <li>Tailwind CSS</li>
+  <li>DaisyUI</li>
+  <li>React Icons</li>
+  <li>React Toastify</li>
+</ul>
 
 <h2>Features</h2>
 
--Workout Library — Browse a collection of exercises covering major muscle groups, with information such as equipment, duration, calories, and rating.
--Workout Details — View complete workout information including description, categories, difficulty, sets, reps, instructions, duration, calories, and rating.
--Today's Plan & Saved Workouts — Add workouts to today's plan or save them for later, with live counters displayed in the navbar.
--Sorting — Sort workouts by duration, calories, or rating.
--Toast Notifications — Receive immediate feedback when adding, saving, completing, or removing workouts.
--Responsive Design — Fully responsive layout that works across mobile, tablet, and desktop devices.
--Loading & Error States — Includes loading animations and a custom 404 page for a smoother user experience.
+<ul>
+  <li>
+    <strong>🏋️ Workout Library</strong><br>
+    Browse a collection of exercises covering major muscle groups, with details such as equipment, duration, calories, and rating.
+  </li>
+  <br>
+
+  <li>
+    <strong>📋 Workout Details</strong><br>
+    View complete workout information including description, categories, difficulty, sets, reps, instructions, duration, calories, and rating.
+  </li>
+  <br>
+
+  <li>
+    <strong>📝 Today's Plan & Saved Workouts</strong><br>
+    Add workouts to today's plan or save them for later, with live counters displayed in the navbar.
+  </li>
+  <br>
+
+  <li>
+    <strong>↕️ Sorting</strong><br>
+    Sort workouts by duration, calories, or rating to quickly find the workout you need.
+  </li>
+  <br>
+
+  <li>
+    <strong>🔔 Toast Notifications</strong><br>
+    Receive immediate feedback when adding, saving, completing, or removing workouts.
+  </li>
+  <br>
+
+  <li>
+    <strong>📱 Responsive Design</strong><br>
+    Enjoy a fully responsive experience across mobile, tablet, and desktop devices.
+  </li>
+  <br>
+
+  <li>
+    <strong>⏳ Loading & Error States</strong><br>
+    Includes loading animations and a custom 404 page for a smooth and user-friendly experience.
+  </li>
+</ul>

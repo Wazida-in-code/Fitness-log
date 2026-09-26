@@ -1,11 +1,24 @@
 'use client'
+import { CardType } from "@/app/types/CardType";
 import { createContext, ReactNode, useState } from "react";
 
-export const FitContext = createContext({})
+interface FitType{
+    todayPlan: CardType[];
+    setTodayPlan: React.Dispatch<React.SetStateAction<CardType[]>>;
+    saveLater: CardType[];
+    setSaveLater: React.Dispatch<React.SetStateAction<CardType[]>>;
+}
+
+export const FitContext = createContext<FitType>({
+    todayPlan: [],
+    setTodayPlan: () => {},
+    saveLater: [],
+    setSaveLater: () => {}
+})
 
 const FitProvider = ({children}: {children: ReactNode}) => {
-    const [todayPlan, setTodayPlan] = useState([]);
-    const [saveLater, setSaveLater] = useState([]);
+    const [todayPlan, setTodayPlan] = useState<CardType[]>([]);
+    const [saveLater, setSaveLater] = useState<CardType[]>([]);
 
     const shared = {
         todayPlan, setTodayPlan, 
