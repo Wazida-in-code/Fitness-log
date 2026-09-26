@@ -26,7 +26,7 @@ const RemoveBtn = ({card, active}: RemoveCardProps) => {
 
     return (
         <button onClick={handleRemove} className="ml-1 text-[#69707C] hover:text-white" >
-          <FiX size={16} />
+          <FiX className="size-4 sm:size-5" />
         </button>
         
     );

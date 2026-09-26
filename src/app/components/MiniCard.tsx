@@ -11,7 +11,7 @@ interface CardProps {
   active: string;
 }
 
-const MiniCard = ({card, active}: CardProps) => {
+const MiniCard = ({ card, active }: CardProps) => {
   return (
     <div className="flex w-full items-center gap-4 rounded-2xl border border-[#252A33] bg-[#15171D] p-3 sm:p-4">
       {/* Image */}
@@ -58,7 +58,7 @@ const MiniCard = ({card, active}: CardProps) => {
       </div>
 
       {/* Buttons */}
-      <div className="hidden items-center gap-2 sm:flex">
+      <div className="flex items-center gap-2">
         {/* View Details */}
         <Link
           href={`/exercise/${card.id}`}
